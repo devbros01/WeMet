@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.smarteist.autoimageslider.SliderView
+        <!--<com.smarteist.autoimageslider.SliderView
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:layout_marginStart="10dp"
@@ -31,7 +31,7 @@
             app:sliderIndicatorOrientation="horizontal"
             app:sliderIndicatorGravity="center_horizontal|bottom"
             android:id="@+id/accountimageslider"
-            app:placeholder="@drawable/sample1"/>
+            app:placeholder="@drawable/sample1"/> -->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
