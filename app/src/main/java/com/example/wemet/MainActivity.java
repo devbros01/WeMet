@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button profile,start,account;
+    private Button profile,start,account,chatbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +34,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
         account=findViewById(R.id.button3);
-        start.setOnClickListener(new View.OnClickListener() {
+        account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,account_profile.class);
+                startActivity(intent);
+            }
+        });
+
+        chatbox=findViewById(R.id.button4);
+        chatbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Chat_box.class);
                 startActivity(intent);
             }
         });

@@ -1,37 +1,352 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+     android:layout_width="match_parent"
     tools:context=".account_profile">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/pics"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="502dp"
+        android:padding="10dp"
+        app:iss_auto_cycle="true"
+        app:iss_delay="0"
+        app:iss_error_image="@drawable/error"
+        app:iss_period="1500"
+        app:iss_selected_dot="@drawable/default_selected_dot"
+        app:iss_text_align="CENTER"
+        app:iss_title_background="@drawable/gradient"
+        app:iss_unselected_dot="@drawable/default_unselected_dot"
+        app:layout_constraintBottom_toTopOf="@+id/bio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!--<com.smarteist.autoimageslider.SliderView
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
+
+    </com.denzcoskun.imageslider.ImageSlider>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bio"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pics"
+        android:background="#6aded0">
+
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_work_icon"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/work"
+            app:layout_constraintHorizontal_bias="0.551"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.077"
-            app:sliderIndicatorRadius="1.5dp"
-            app:sliderAutoCycleDirection="back_and_forth"
-            app:sliderIndicatorPadding="4dp"
-            app:sliderIndicatorSelectedColor="#ffffff"
-            app:sliderAnimationDuration="1000"
-            app:sliderAutoCycleEnabled="true"
-            app:sliderIndicatorOrientation="horizontal"
-            app:sliderIndicatorGravity="center_horizontal|bottom"
-            android:id="@+id/accountimageslider"
-            app:placeholder="@drawable/sample1"/> -->
+            app:layout_constraintVertical_bias="0.038">
+
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="18dp"
+            android:background="@drawable/ic_location_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/location"
+            app:layout_constraintHorizontal_bias="0.62"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton8"
+            app:layout_constraintVertical_bias="0.054">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="328dp"
+            android:layout_marginRight="328dp"
+            android:text="work"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="308dp"
+            android:layout_marginRight="308dp"
+            android:text="location"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/work"
+            app:layout_constraintVertical_bias="0.054">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:text="passion1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/passion2"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="12dp"
+
+            android:layout_marginRight="12dp"
+            android:text="passion2"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/passion3"
+            app:layout_constraintStart_toEndOf="@+id/passion1"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="passion3"
+
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/passion4"
+            app:layout_constraintStart_toEndOf="@+id/passion2"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="12dp"
+
+            android:layout_marginRight="12dp"
+            android:text="passion4"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/passion5"
+            app:layout_constraintStart_toEndOf="@+id/passion3"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/passion5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="12dp"
+
+            android:layout_marginRight="12dp"
+            android:text="passion5"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/passion4"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:text="passion6"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/passion7"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passion1">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="passion7"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/passion8"
+            app:layout_constraintTop_toBottomOf="@+id/passion2">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:text="passion8"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/passion9"
+            app:layout_constraintTop_toBottomOf="@+id/passion3">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="passion9"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/passion10"
+            app:layout_constraintTop_toBottomOf="@+id/passion4">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="passion10"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passion5">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="passion11"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/passion12"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passion6"
+            app:layout_constraintVertical_bias="0.461">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="passion12"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/passion13"
+            app:layout_constraintTop_toBottomOf="@+id/passion7"
+            app:layout_constraintVertical_bias="0.461">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="passion13"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/passion14"
+            app:layout_constraintTop_toBottomOf="@+id/passion8"
+            app:layout_constraintVertical_bias="0.486">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="passion14"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/passion15"
+            app:layout_constraintTop_toBottomOf="@+id/passion9">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/passion15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="passion15"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passion10">
+
+        </TextView>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

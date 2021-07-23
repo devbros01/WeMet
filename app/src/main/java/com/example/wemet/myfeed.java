@@ -11,16 +11,12 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.view.animation.AccelerateInterpolator;
 
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager;
 import com.yuyakaido.android.cardstackview.CardStackListener;
 import com.yuyakaido.android.cardstackview.CardStackView;
 import com.yuyakaido.android.cardstackview.Direction;
-import com.yuyakaido.android.cardstackview.Duration;
-import com.yuyakaido.android.cardstackview.RewindAnimationSetting;
 import com.yuyakaido.android.cardstackview.StackFrom;
-import com.yuyakaido.android.cardstackview.SwipeAnimationSetting;
 import com.yuyakaido.android.cardstackview.SwipeableMethod;
 
 import java.util.ArrayList;
@@ -32,7 +28,6 @@ public class myfeed extends AppCompatActivity {
     private CardStackLayoutManager manager;
     private Cardstack adapter;
     private ImageButton cancel, accept;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +82,7 @@ public class myfeed extends AppCompatActivity {
                 Log.d(TAG, "onCardAppeared: " + position + ", name: " + tv.getText());
             }
         });
+
         manager.setStackFrom(StackFrom.None);
         manager.setVisibleCount(3);
         manager.setTranslationInterval(8.0f);
@@ -102,37 +98,7 @@ public class myfeed extends AppCompatActivity {
         cardStackView.setAdapter(adapter);
         cardStackView.setItemAnimator(new DefaultItemAnimator());
 
-
-       /*ImageButton cancel = findViewById(R.id.declinebtn);
-       cancel.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-
-                   ImageButton setting = SwipeAnimationSetting.Builder()
-                           .setDirection(Direction.Left)
-                           .setDuration(Duration.Normal.duration)
-                           .setInterpolator(new AccelerateInterpolator())
-                           .build();
-                   manager.setSwipeAnimationSetting(setting);
-                   cardStackView.swipe();
-
-
-               Toast.makeText(myfeed.this, "Declined", Toast.LENGTH_SHORT).show();
-           }
-       });
-       ImageButton accept = findViewById(R.id.acceptbtn);
-       accept.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-
-               Toast.makeText(myfeed.this, "Accepted", Toast.LENGTH_SHORT).show();
-           }
-       });*/
-
-
     }
-
-
 
     private void paginate() {
         List<ItemModel> old=adapter.getItems();
@@ -158,7 +124,4 @@ public class myfeed extends AppCompatActivity {
         items.add(new ItemModel(R.drawable.sample5, "Payel Dasgupta", "20", "Malancha"));
         return items;
     }
-
-
-
 }
