@@ -111,17 +111,17 @@ public class myfeed extends AppCompatActivity {
 
     private List<ItemModel> addList() {
         List<ItemModel> items = new ArrayList<>();
-        items.add(new ItemModel(R.drawable.sample1, "Ankita Sen", "19", "Malancha"));
+        items.add(new ItemModel(R.drawable.sample1, "Supriyo Sen", "19", "Malancha"));
         items.add(new ItemModel(R.drawable.sample2, "Sneha Das", "20", "Inda"));
-        items.add(new ItemModel(R.drawable.sample3, "Kavita Roy", "18", "Prembazar"));
+        items.add(new ItemModel(R.drawable.sample3, "Vivek Roy", "18", "Prembazar"));
         items.add(new ItemModel(R.drawable.sample4, "Riti pal", "19", "Talbagicha"));
-        items.add(new ItemModel(R.drawable.sample5, "Payel Dasgupta", "20", "Malancha"));
+        items.add(new ItemModel(R.drawable.sample5, "Nirmal Dasgupta", "20", "Malancha"));
 
-        items.add(new ItemModel(R.drawable.sample1, "Ankita Sen", "19", "Malancha"));
+        items.add(new ItemModel(R.drawable.sample1, "Supriyo Sen", "19", "Malancha"));
         items.add(new ItemModel(R.drawable.sample2, "Sneha Das", "20", "Inda"));
-        items.add(new ItemModel(R.drawable.sample3, "Kavita Roy", "18", "Prembazar"));
+        items.add(new ItemModel(R.drawable.sample3, "Vivek Roy", "18", "Prembazar"));
         items.add(new ItemModel(R.drawable.sample4, "Riti pal", "19", "Talbagicha"));
-        items.add(new ItemModel(R.drawable.sample5, "Payel Dasgupta", "20", "Malancha"));
+        items.add(new ItemModel(R.drawable.sample5, "Nirmal Dasgupta", "20", "Malancha"));
         return items;
     }
 }
