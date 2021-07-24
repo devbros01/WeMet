@@ -25,7 +25,7 @@ public class account_profile extends AppCompatActivity {
         imageSlider=findViewById(R.id.pics);
         List<SlideModel> slideModels=new ArrayList<>();
 
-        imageSlider.setImageList(slideModels,true);
+       // imageSlider.setImageList(slideModels,true);
 
 
 
